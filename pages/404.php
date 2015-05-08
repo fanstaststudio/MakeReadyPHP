@@ -1,4 +1,4 @@
-    <header class="background-box">
+<header class="background-box" style="background-image: url(images/us.jpg);">
 		
 	  	<div class="aboutus-text">
 		  	<h2 id="aboutus_titel">Page not found!</h2>

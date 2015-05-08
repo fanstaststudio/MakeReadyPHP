@@ -1,4 +1,4 @@
-        <header class="background-box">
+        <header class="background-box" style="background-image: url(images/us.jpg);">
 	  	<div class="header-text">
 		  	<h1>Make Ready</h1>
 		  	<hr>

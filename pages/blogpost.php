@@ -37,7 +37,7 @@ $id_post = "1"; //the post or the page id
 
 <div class="cmt-container" >
     <?php 
-    $sql = mysql_query("SELECT * FROM comments WHERE id_post = '$id_post'") or die(mysql_error());;
+    $sql = mysql_query("SELECT * FROM comment WHERE id_post = '$id_post'") or die(mysql_error());;
     while($affcom = mysql_fetch_assoc($sql)){ 
         $name = $affcom['name'];
         $email = $affcom['email'];

@@ -13,7 +13,7 @@ if($_POST['act'] == 'add-com'):
 	$default = "mm";
 	$size = 35;
 
-    mysql_query("INSERT INTO comments (name, email, comment, id_post)VALUES( '$name', '$email', '$comment', '$id_post')");
+    mysql_query("INSERT INTO comment (name, email, comment, id_post)VALUES( '$name', '$email', '$comment', '$id_post')");
     if(!mysql_errno()){
 ?>
 

@@ -1,6 +1,6 @@
 <?php
 $mysql_host = "localhost";
-$mysql_database = "comments"; //create the database called "comment_sys"
+$mysql_database = "comment"; //create the database called "comment_sys"
 $mysql_user = "root";
 $mysql_password = "";
 
