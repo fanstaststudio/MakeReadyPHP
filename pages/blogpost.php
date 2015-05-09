@@ -1,48 +1,80 @@
-<br><br>
+<?php 
+$url_id = $_GET["id"];
+echo $url_id;
 
+$privat=$mysql->query("SELECT * FROM event_news WHERE id='$url_id' AND inuse='1' and type='4'") or die ($mysql->error); if($privat) { while($row = $privat->fetch_object()) { 
+
+	$id = $row->id; 
+	$headline_content = $row->headline; 
+	$content = $row->content; 
+	$image = $row->image; 
+	$image_1 = $row->image_1; 
+	$image_2 = $row->image_2; 
+	$image_3 = $row->image_3; 
+	$link = $row->link; 
+
+	$billede = $mysql->query("SELECT * FROM images WHERE headline='$image_3'") or die ($mysql->error); if($billede) { while($row = $billede->fetch_object()) { 
+		$billede_url = $row->link; 
+		$headline = $row->headline; 
+
+$privat_content = <<<EUD
     <!--- Jumbotron -->
     <div class="container-fluid">
-			<div class="jumbotron blog" style="opacity: 0.7; background-image: url(http://static.pexels.com/wp-content/uploads/2015/02/radios-vintage-4624.jpg);">
+	
+	<style>
+	#trold_$id{
+	  background-image: 
+	   linear-gradient(
+	      rgba(0, 0, 0, 0.5),
+	      rgba(0, 0, 0, 0.5)
+	    ),
+	    url(admin/cms_image/blog/crops/full_$billede_url);
+	}
+	</style>
+	
+			<div class="jumbotron blog" id="trold_$id">
 			<div class="headline_blog">
-			<p class="border">Money in the bank!</p>
-		  	<h1>We are working on something brilliant! no! Amazing!</h1>
-			<p>It will change the world</p>	
+			<p class="border">$headline_content</p>
+		  	<h1>$content</h1>
+			<p>$image;</p>	
 		<div class="centered">
 <a href="index.php?site=blog"><button type="button" onclick="index.php?site=blog" class="btn btn-primary btn-lg outline"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button></a>
 	
-	<div class="facebook"><a href="#">
+	<div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://madss-macbook-pro-3.local/MakeReadyPHP/index.php?site=blogpost%26id=$id">
 		<div class="logo"></div>
 			<div class="link">Share on facebook</div>
 	</div></a>
 	
 	</div></div>		
-
-	
-	</div></div>
-    <!--- End Jumbotron -->
+</div></div>
  
 	<div class="blog_content">
-<h1>HEJsdfg fdg fdg fdg fdgfdg dfs!</h1>
-<p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne<br>
-	 med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper.
-	<br><br>
-	 Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p> 
+<h1>$image_1</h1>
+<p>$image_2</p> 
+EUD;
+echo $privat_content; 
+ }} }}; ?>
+
+
+
+
+
 
 	<div class="comment">
 <h1>Skriv en kommentar:</h1>
        
 <?php 
-$id_post = "1"; //the post or the page id
+$id_post = $id; //the post or the page id
 ?>
 
 <div class="cmt-container" >
     <?php 
     $sql = mysql_query("SELECT * FROM comment WHERE id_post = '$id_post'") or die(mysql_error());;
     while($affcom = mysql_fetch_assoc($sql)){ 
-        $name = $affcom['name'];
-        $email = $affcom['email'];
-        $comment = $affcom['comment'];
-        $date = $affcom['date'];
+        $name_c = $affcom['name'];
+        $email_c = $affcom['email'];
+        $comment_c = $affcom['comment'];
+        $date_c = $affcom['date'];
 
         $default = "mm";
         $size = 35;
@@ -51,10 +83,10 @@ $id_post = "1"; //the post or the page id
     <div class="cmt-cnt">
 <img src="images/profile-img.png" width="160" height="160" alt="Profile Img">
         <div class="thecom">
-            <h5><?php echo $name; ?></h5><span data-utime="1371248446" class="com-dt"><?php echo $date; ?></span>
+            <h5><?php echo $name_c; ?></h5><span data-utime="1371248446" class="com-dt"><?php echo $date_c; ?></span>
             <br/>
             <p>
-                <?php echo $comment; ?>
+                <?php echo $comment_c; ?>
             </p>
         </div>
     </div><!-- end "cmt-cnt" -->

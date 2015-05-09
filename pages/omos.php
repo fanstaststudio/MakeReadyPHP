@@ -1,8 +1,8 @@
 <header class="background-box" style="background-image: url(images/us.jpg);">
 		
 	  	<div class="aboutus-text">
-		  	<h2 id="aboutus_titel">Vi er kreative!</h2>
-			<h3 id="aboutus_description">Boom Chakalaka!!!!</h3>
+		  	<h2 id="aboutus_titel"><?php echo $footer_headline; ?></h2>
+			<h3 id="aboutus_description"><?php echo $footer_content; ?></h3>
 	  	</div>
     </header>
 	

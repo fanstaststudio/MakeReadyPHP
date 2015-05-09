@@ -847,3 +847,76 @@ body
 				width: 618px
 			.derp
 				display: none
+					
+.case, .case_left
+	border-radius: 0px
+	margin-bottom: 0px
+	width: 100%
+	.case_slide
+		background-size: cover
+	.case_info, .case_info
+		padding: 10px 20px 20px 20px
+		background-color: #fff
+	.case_logo
+		float: right
+		width: 150px
+		opacity: 0.6
+		&:hover
+			opacity: 1
+	@media screen and (max-width: $phone-break)
+		.case_slide
+			width: 100%
+			height: 300px
+		.case_info
+			float: none
+			width: 100%
+	@media screen and (min-width: $tablet-break)
+		.case_slide
+			width: 100%
+			height: 500px
+		.case_info
+			float: none
+			width: 100%
+	@media screen and (min-width: $small-break)
+		.case_info
+			float: right
+			width: 400px
+			max-width: 45%
+			min-width: 30%
+		.case_slide 
+			height: 500pz
+		.case_info
+			height: 500px
+	@media screen and (min-width: $large-break)
+		.case_slide 	
+			height: 700px
+			width: 70%
+		.case_info
+			height: 700px
+.case_left
+	@media screen and (max-width: $tablet-break)
+		.case_slide
+			width: 100%
+			height: 300px
+			margin-left: 0%
+		.case_info
+			float: right
+	@media screen and (max-width: $tablet-break)
+		.case_slide
+			width: 100%
+			height: 300px
+			margin-left: 0%
+		.case_info
+			width: 100%
+			float: none
+	@media screen and (min-width: $small-break)
+		.case_info
+			float: left
+			width: 400px
+			max-width: 45%
+			min-width: 30%
+		.case_slide
+			margin-left: 30%
+		.case_logo
+			float: left
+		

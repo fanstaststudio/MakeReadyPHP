@@ -1,4 +1,9 @@
-<?php include('config/config.php'); ?>
+<?php
+include('config.php');
+include('mysql.php');
+include('database.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

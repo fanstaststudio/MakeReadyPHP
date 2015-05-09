@@ -2,10 +2,10 @@
 			<div class="row">
 				<footer>
 					<h1>
-						Få en kop kaffe og et uforpligtende tilbud!
+						<?php echo $email; ?>
 					</h1>
-					<button type="button" class="btn btn-default"><h1>Kontakt os!</h1></button>
-					<p>Make Ready | 2015 </p>
+					<a class="btn btn-default" href="index.php?site=kontakt"><h1>Kontakt os!</h1></a><br><br>
+					<p><?php echo $phone; ?></p>
 				</footer>
 			</div>
 		</div>

@@ -1,9 +1,9 @@
 <?php
 extract($_POST);
 if($_POST['act'] == 'add-com'):
-	$name = htmlentities($name);
-    $email = htmlentities($email);
-    $comment = htmlentities($comment);
+	$name_c = htmlentities($name);
+    $email_c = htmlentities($email);
+    $comment_c = htmlentities($comment);
 
     // Connect to the database
 	include('../config/config.php'); 
@@ -13,16 +13,16 @@ if($_POST['act'] == 'add-com'):
 	$default = "mm";
 	$size = 35;
 
-    mysql_query("INSERT INTO comment (name, email, comment, id_post)VALUES( '$name', '$email', '$comment', '$id_post')");
+    mysql_query("INSERT INTO comment (name, email, comment, id_post)VALUES( '$name_c', '$email_c', '$comment_c', '$id_post')");
     if(!mysql_errno()){
 ?>
 
     <div class="cmt-cnt">
 <img src="images/profile-img.png" width="160" height="160" alt="Profile Img">
 		<div class="thecom">
-	        <h5><?php echo $name; ?></h5><span  class="com-dt"><?php echo date('d-m-Y H:i'); ?></span>
+	        <h5><?php echo $name_c; ?></h5><span  class="com-dt"><?php echo date('d-m-Y H:i'); ?></span>
 	        <br/>
-	       	<p><?php echo $comment; ?></p>
+	       	<p><?php echo $comment_c; ?></p>
 	    </div>
 	</div><!-- end "cmt-cnt" -->
 

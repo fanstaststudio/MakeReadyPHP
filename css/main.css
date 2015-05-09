@@ -6448,3 +6448,75 @@ body .kontaktform .btn-phone {
     width: 618px; }
   body .kontaktform .derp {
     display: none; } }
+
+.case, .case_left {
+  border-radius: 0px;
+  margin-bottom: 0px;
+  width: 100%; }
+  .case .case_slide, .case_left .case_slide {
+    background-size: cover; }
+  .case .case_info, .case .case_info, .case_left .case_info, .case_left .case_info {
+    padding: 10px 20px 20px 20px;
+    background-color: #fff; }
+  .case .case_logo, .case_left .case_logo {
+    float: right;
+    width: 150px;
+    opacity: 0.6; }
+    .case .case_logo:hover, .case_left .case_logo:hover {
+      opacity: 1; }
+  @media screen and (max-width: 480px) {
+    .case .case_slide, .case_left .case_slide {
+      width: 100%;
+      height: 300px; }
+    .case .case_info, .case_left .case_info {
+      float: none;
+      width: 100%; } }
+  @media screen and (min-width: 481px) {
+    .case .case_slide, .case_left .case_slide {
+      width: 100%;
+      height: 500px; }
+    .case .case_info, .case_left .case_info {
+      float: none;
+      width: 100%; } }
+  @media screen and (min-width: 651px) {
+    .case .case_info, .case_left .case_info {
+      float: right;
+      width: 400px;
+      max-width: 45%;
+      min-width: 30%; }
+    .case .case_slide, .case_left .case_slide {
+      height: 500pz; }
+    .case .case_info, .case_left .case_info {
+      height: 500px; } }
+  @media screen and (min-width: 1051px) {
+    .case .case_slide, .case_left .case_slide {
+      height: 700px;
+      width: 70%; }
+    .case .case_info, .case_left .case_info {
+      height: 700px; } }
+
+@media screen and (max-width: 481px) {
+  .case_left .case_slide {
+    width: 100%;
+    height: 300px;
+    margin-left: 0%; }
+  .case_left .case_info {
+    float: right; } }
+@media screen and (max-width: 481px) {
+  .case_left .case_slide {
+    width: 100%;
+    height: 300px;
+    margin-left: 0%; }
+  .case_left .case_info {
+    width: 100%;
+    float: none; } }
+@media screen and (min-width: 651px) {
+  .case_left .case_info {
+    float: left;
+    width: 400px;
+    max-width: 45%;
+    min-width: 30%; }
+  .case_left .case_slide {
+    margin-left: 30%; }
+  .case_left .case_logo {
+    float: left; } }

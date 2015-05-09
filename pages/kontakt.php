@@ -16,13 +16,12 @@
 									</li>
 									<li class="yd_kon_txt">
 										<hr/>
-										<h2>Skal vi arbejde sammen ?</h2>
+										<h2><?php echo $left_headline; ?></h2>
 										<hr/>
 										<p>
-											<b>Har du noget vi kan hjælpe med? Så giv os et ring eller skriv en mail!</b>
+											<b><?php echo $left_content; ?></b>
 											<br/><br/>
-											Vi kommer gerne forbi din butik / virksomhed og kigger nærmere på 
-											hvordan vi bedst kan 
+											<?php echo $right_headline; ?>
 										</p>
 									</li>
 								</ul>
@@ -40,8 +39,9 @@
 				<div class="kontaktform">
 						
 						<div class="buttfill">
-							<h2>Ring til os på: <a href="tel:13371337" class="btn btn-phone" title="Ring til os !">
-									+45 13 37 13 37
+							<h2>Ring til os på: <a href="tel:<?php echo $adresse; ?>" class="btn btn-phone" title="Ring til os !">
+									<?php echo $adresse; ?>
+									
 							</a>
 							</h2>
 						</div>
@@ -64,8 +64,9 @@
 							</div>
 							<br/>
 							<p>
-								Hvis du ikke ønsker at udfylde en form <br/> kan du blot send en mail til:<br/>
-								<a href="mailto:mail@makeready.dk">mail@makeready.dk</a>
+								<?php echo $right_name; ?>
+								<br/>
+								<a href="<?php echo $right_content; ?>">Klik her</a>
 							</p>
 						</form>
 					</div>
